@@ -11,8 +11,6 @@ import lock from "../assets/icons/lock.png";
 
 const FilterView = () => {
 
-  const defaultFilter = { minDistance: 0, maxDistance: 2147483646, minSize: 0, maxSize: 2147483646, minPrice: 0, maxPrice: 2147483646, minRating: 0, maxRating: 2147483646, filterParking: false, filterRamp: false, filterElevator: false, filterLock: false };
-
   const { currFilter, updateFilter, filterViewOpen, toggleFilterViewOpen } = useContext(FilterContext);
 
   const [maybeFilter, setMaybeFilter] = useState(currFilter)
@@ -50,16 +48,16 @@ const FilterView = () => {
 
                   <Button.Group hasAddons>
                     <Button rounded color={maybeFilter.filterParking ? "info" : "white"} style={{ width: "25%" }} onClick={() => { setMaybeFilter({ ...maybeFilter, filterParking: !maybeFilter.filterParking }); }}>
-                      <img src={parking} style={{ width: "65%" }}></img>
+                      <img alt='some text' src={parking} style={{ width: "65%" }}></img>
                     </Button>
                     <Button rounded color={maybeFilter.filterRamp ? "info" : "white"} style={{ width: "25%" }} onClick={() => { setMaybeFilter({ ...maybeFilter, filterRamp: !maybeFilter.filterRamp }); }}>
-                      <img src={ramp} style={{ width: "65%" }}></img>
+                      <img alt='some text' src={ramp} style={{ width: "65%" }}></img>
                     </Button>
                     <Button rounded color={maybeFilter.filterElevator ? "info" : "white"} style={{ width: "25%" }} onClick={() => { setMaybeFilter({ ...maybeFilter, filterElevator: !maybeFilter.filterElevator }); }}>
-                      <img src={elevator} style={{ width: "45%" }}></img>
+                      <img alt='some text' src={elevator} style={{ width: "45%" }}></img>
                     </Button>
                     <Button rounded color={maybeFilter.filterLock ? "info" : "white"} style={{ width: "25%" }} onClick={() => { setMaybeFilter({ ...maybeFilter, filerLock: !maybeFilter.filterLock }); }}>
-                      <img src={lock} style={{ width: "65%" }}></img>
+                      <img alt='some text' src={lock} style={{ width: "65%" }}></img>
                     </Button>
                   </Button.Group>
 

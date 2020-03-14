@@ -19,7 +19,6 @@ class Calendar extends Component {
 
     onChange = (startDate, endDate) => {
         this.setState({ startDate, endDate });
-        var numOfDays = (endDate - startDate) / 86400000;
         // calculatePrice(numOfDays);
     }
 

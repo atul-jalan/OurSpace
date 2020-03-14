@@ -8,7 +8,7 @@ import "./assets/styles/calendar.css";
 import filter from "./assets/icons/filter.png";
 import add from "./assets/icons/add.png";
 
-import { Button, PageLoader, Column, Icon } from "rbx";
+import { Button, PageLoader, Column } from "rbx";
 
 import ListingList from "./components/Listing.js"
 import DetailView from "./components/DetailView.js";
@@ -27,8 +27,8 @@ const App = () => {
   const [contactViewOpen, toggleContactView] = useState(false);
   const [filterViewOpen, toggleFilterViewOpen] = useState(false);
 
-  const [listPerPage, setListPerPage] = useState(10);
-  const [pageNum, setPageNum] = useState(1);
+  const pageNum = 1
+  const listPerPage = 10
 
   useEffect(() => {
     function getListingsData() {
@@ -47,7 +47,7 @@ const App = () => {
         });
     }
     getListingsData();
-  }, []);
+  });
 
   const updateAll = (newListing) => {
   	/*
@@ -83,10 +83,10 @@ const BottomBar = () => {
         <Button style={{width:"50%", top:"1vh"}} onClick={() => {
           toggleFilterViewOpen(true); setTimeout(function () { document.getElementById("filterView").classList.add("show") }, 0);
         }}>
-          <img src={filter} style={{width:"2.5vh"}}/>
+          <img alt='some text' src={filter} style={{width:"2.5vh"}}/>
         </Button>
         <Button style={{width:"50%", top:"1vh"}}>
-          <img src={add} style={{width:"2.5vh"}}/>
+          <img alt='some text' src={add} style={{width:"2.5vh"}}/>
         </Button>
       </Column.Group>
     </div>

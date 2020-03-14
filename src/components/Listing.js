@@ -42,8 +42,8 @@ const StorageCard = ({ listing }) => {
                     <div style={{ fontSize: '24px', textAlign: "left", width: "100%", lineHeight: '30px' }}>{listing.name}
                         <div style={{ display: 'inline-block', float: "right", marginTop: '5px' }}>
 
-                            <img style={listing.attributes.hasElevator ? { height: '22px' } : { display: "none" }} src={elevator} />
-                            <img style={listing.attributes.hasParking ? { height: '22px' } : { display: "none" }} src={parking} />
+                            <img alt='some text' style={listing.attributes.hasElevator ? { height: '22px' } : { display: "none" }} src={elevator} />
+                            <img alt='some text' style={listing.attributes.hasParking ? { height: '22px' } : { display: "none" }} src={parking} />
                         </div>
 
                     </div>

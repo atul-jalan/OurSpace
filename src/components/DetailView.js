@@ -67,7 +67,7 @@ const DetailView = () => {
                     <table style={{ width: "100%" }}>
                       <tr style={currListing.attributes.hasElevator ? { height: '22px' } : { display: "none" }}>
                         <th style={{ width: "10%" }}>
-                          <img src={elevator} />
+                          <img alt='some text' src={elevator} />
                         </th>
                         <th style={{ width: "90%", textAlign: "left", fontWeight: "normal", fontSize: "15px" }}>
                           <p style={{ fontWeight: "500" }}>Elevator</p>
@@ -76,7 +76,7 @@ const DetailView = () => {
   
                       <tr style={currListing.attributes.hasParking ? { height: '22px' } : { display: "none" }}>
                         <th style={{ width: "10%" }}>
-                          <img src={parking} />
+                          <img alt='some text' src={parking} />
                         </th>
                         <th style={{ width: "90%", textAlign: "left", fontWeight: "normal", fontSize: "15px" }}>
                           <p style={{ fontWeight: "500" }}>Free parking on premise</p>
