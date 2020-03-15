@@ -5,7 +5,6 @@
   "dependencies": {
     "@lls/react-light-calendar": "^2.0.7",
     "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -47,7 +46,9 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@testing-library/react": "^9.5.0"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cs394-w20/OurSpace.git"

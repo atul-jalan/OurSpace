@@ -9,6 +9,8 @@ import { ListingContext } from "./Contexts.js";
 
 import { Card, Image, Column } from "rbx";
 
+const allListings = require('../listings.json')
+
 const StorageCard = ({ listing }) => {
 
     const { updateCurrListing } = useContext(ListingContext);
@@ -52,7 +54,7 @@ const StorageCard = ({ listing }) => {
                         <tr>
                             <th style={{ width: "60%" }}>
                                 <div style={{ fontSize: '20px', textAlign: "left", fontWeight: "normal" }}>
-                                    <span style={{ fontWeight: "bold" }}>${listing.price}</span>/night
+                                    <span style={{ fontWeight: "bold" }}>${listing.price}</span> <div>/night</div>
                 </div>
                             </th>
                             <th style={{ width: "40%", textAlign: "right", fontWeight: "normal", fontSize: "15px" }}>
@@ -69,19 +71,23 @@ const StorageCard = ({ listing }) => {
 
 const ListingList = () => {
 
-    const { listingList } = useContext(ListingContext);
 
-    var columnIds = [...Array(listingList.length).keys()];
+
+    const { listingList } = (useContext(ListingContext) || allListings);
+    if(listingList !== undefined){
+        var columnIds = [...Array(listingList.length).keys()];
+    }
 
     return (
-        <div>
+        <div data-testid="a-listing">
+            {listingList !== undefined &&
             <Column.Group multiline>
                 {columnIds.map(i => (
                     <Column key={i} size="one-quarter">
                         <StorageCard listing={listingList[i]} />
                     </Column>
                 ))}
-            </Column.Group>
+            </Column.Group>}
         </div>
     );
 };

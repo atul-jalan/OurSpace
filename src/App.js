@@ -16,11 +16,12 @@ import FilterView from "./components/FilterView.js";
 import ContactView from "./components/ContactView.js"
 
 import { ListingContext, FilterContext } from "./components/Contexts.js";
+const allListings = require('./listings.json')
 
 const App = () => {
 
   const [currListing, updateCurrListing] = useState(null);
-  const [listingList, updateList] = useState([]);
+  const [listingList, updateList] = useState(allListings);
   
   const [currFilter, updateFilter] = useState({ minDistance: 0, maxDistance: 2147483646, minSize: 0, maxSize: 2147483646, minPrice: 0, maxPrice: 2147483646, minRating: 0, maxRating: 2147483646, filterParking: false, filterRamp: false, filterElevator: false, filterLock: false });
   
