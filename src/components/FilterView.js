@@ -16,7 +16,7 @@ const FilterView = () => {
   const [maybeFilter, setMaybeFilter] = useState(currFilter)
 
   return (
-    <div>
+    <div data-testid='filterView'>
       <Modal id="filterView" active={filterViewOpen}>
         <React.Fragment>
           <Modal.Background style={{ height: "100%", margin: "0%", backgroundColor: "rgba(0, 0, 0, .2)" }}></Modal.Background>
