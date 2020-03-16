@@ -27,7 +27,7 @@ const FilterView = () => {
                 &#10005;
               </div>
               <Content style={{ width: "94%", margin: "auto", paddingTop: "1%", paddingBottom: "2%" }}>
-                <Title>Filter</Title>
+                <Title data-cy="filterView">Filter Options</Title>
                 <div style={{ width: "100%" }}>
 
                   <Input rounded style={{ width: "48%", marginRight: "2%" }} placeholder="How near? (mi)" onChange={(e) => { setMaybeFilter({ ...maybeFilter, minDistance: parseInt(e.target.value) }); }}></Input>
