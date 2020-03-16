@@ -5,7 +5,6 @@ import "rbx/index.css";
 import "./assets/styles/views.css"
 import "./assets/styles/calendar.css";
 
-import filter from "./assets/icons/filter.png";
 import add from "./assets/icons/add.png";
 
 import { Button, PageLoader, Column } from "rbx";
